@@ -2,14 +2,17 @@ def temp_promedio(temperaturas):
 
     promedios = {}
 
+    #Inicializo las variables
     for ciudad, semanas in temperaturas.items():
         total_temperaturas = 0
         num_temperaturas = 0
 
+        #Obtener los datos requeridos
         for semana in semanas:
             total_temperaturas += sum(semana)
             num_temperaturas += len(semana)
 
+        #Sacar el promedio de cada ciudad
         promedio =total_temperaturas / num_temperaturas if num_temperaturas else 0
         promedios[ciudad] =promedio
 
